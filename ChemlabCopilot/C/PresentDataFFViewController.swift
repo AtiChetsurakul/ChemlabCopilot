@@ -9,23 +9,27 @@ import UIKit
 
 class PresentDataFFViewController: UIViewController {
 
-    
+    @IBOutlet weak var titleName: UILabel!
+    @IBOutlet weak var canonicalSMILES: UILabel!
+    @IBOutlet weak var iUPACName: UILabel!
+    @IBOutlet weak var molecularFormula: UILabel!
+    @IBOutlet weak var mWeight: UILabel!
+
     var modelToPresent:ChemModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(modelToPresent?.inChI ?? "404")
+        labelTextConnecting()
         // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
+    func labelTextConnecting(){
+        titleName.text =        "Name: \(modelToPresent?.titleCompound ?? "404Error")"
+        canonicalSMILES.text =  "\(modelToPresent?.canonicalSMILES ?? "404Error")"
+        iUPACName.text =        "\(modelToPresent?.iUPACName ?? "404Error")"
+        molecularFormula.text = "\(modelToPresent?.MolecularFormula ?? "404Error")"
+        mWeight.text =          "\(modelToPresent?.molecularWeight ?? "404Error") Gram/Mole"
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }

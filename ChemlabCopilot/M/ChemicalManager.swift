@@ -55,7 +55,7 @@ struct ChemicalManager {
             let title = pathWay.Title
             let moleW = pathWay.MolecularWeight
             let canonical = pathWay.CanonicalSMILES
-            let inc = pathWay.InChI
+            let inc = pathWay.MolecularFormula
             let iup = pathWay.IUPACName
             let weather = ChemModel(title, mw: moleW, smile: canonical, inchi: inc, iupac: iup)
             return weather

@@ -17,7 +17,7 @@ struct PropertyTableS:Codable {
 struct Property: Codable {
     let MolecularWeight:String
     let CanonicalSMILES:String
-    let InChI:String
+    let MolecularFormula:String
     let IUPACName:String
     let Title:String
 }

@@ -60,14 +60,38 @@
 			children = (
 				0B01FBCA275DF21800F5AA00 /* AppDelegate.swift */,
 				0B01FBCC275DF21800F5AA00 /* SceneDelegate.swift */,
-				0B01FBCE275DF21800F5AA00 /* ViewController.swift */,
-				0B01FBD0275DF21800F5AA00 /* Main.storyboard */,
+				0B01FBE3275DF2BC00F5AA00 /* M */,
+				0B01FBE1275DF2A800F5AA00 /* C */,
+				0B01FBE2275DF2B400F5AA00 /* V */,
 				0B01FBD6275DF21900F5AA00 /* Assets.xcassets */,
 				0B01FBD8275DF21900F5AA00 /* LaunchScreen.storyboard */,
 				0B01FBDB275DF21900F5AA00 /* Info.plist */,
 				0B01FBD3275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld */,
 			);
 			path = ChemlabCopilot;
+			sourceTree = "<group>";
+		};
+		0B01FBE1275DF2A800F5AA00 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				0B01FBCE275DF21800F5AA00 /* ViewController.swift */,
+			);
+			path = C;
+			sourceTree = "<group>";
+		};
+		0B01FBE2275DF2B400F5AA00 /* V */ = {
+			isa = PBXGroup;
+			children = (
+				0B01FBD0275DF21800F5AA00 /* Main.storyboard */,
+			);
+			path = V;
+			sourceTree = "<group>";
+		};
+		0B01FBE3275DF2BC00F5AA00 /* M */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = M;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +325,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +335,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -329,6 +354,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,7 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

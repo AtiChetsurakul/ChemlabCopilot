@@ -14,6 +14,10 @@
 		0B01FBD5275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBD3275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld */; };
 		0B01FBD7275DF21900F5AA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01FBD6275DF21900F5AA00 /* Assets.xcassets */; };
 		0B01FBDA275DF21900F5AA00 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B01FBD8275DF21900F5AA00 /* LaunchScreen.storyboard */; };
+		0B01FBE5275E080300F5AA00 /* ChemicalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBE4275E080300F5AA00 /* ChemicalManager.swift */; };
+		0B01FBE7275E086000F5AA00 /* ChemPropData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBE6275E086000F5AA00 /* ChemPropData.swift */; };
+		0B01FBE9275E08FF00F5AA00 /* ChemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBE8275E08FF00F5AA00 /* ChemModel.swift */; };
+		0B01FBEB275E0A0B00F5AA00 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBEA275E0A0B00F5AA00 /* K.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		0B01FBD6275DF21900F5AA00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B01FBD9275DF21900F5AA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B01FBDB275DF21900F5AA00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B01FBE4275E080300F5AA00 /* ChemicalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemicalManager.swift; sourceTree = "<group>"; };
+		0B01FBE6275E086000F5AA00 /* ChemPropData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemPropData.swift; sourceTree = "<group>"; };
+		0B01FBE8275E08FF00F5AA00 /* ChemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemModel.swift; sourceTree = "<group>"; };
+		0B01FBEA275E0A0B00F5AA00 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +98,10 @@
 		0B01FBE3275DF2BC00F5AA00 /* M */ = {
 			isa = PBXGroup;
 			children = (
+				0B01FBE4275E080300F5AA00 /* ChemicalManager.swift */,
+				0B01FBE6275E086000F5AA00 /* ChemPropData.swift */,
+				0B01FBE8275E08FF00F5AA00 /* ChemModel.swift */,
+				0B01FBEA275E0A0B00F5AA00 /* K.swift */,
 			);
 			path = M;
 			sourceTree = "<group>";
@@ -169,6 +181,10 @@
 				0B01FBD5275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld in Sources */,
 				0B01FBCB275DF21800F5AA00 /* AppDelegate.swift in Sources */,
 				0B01FBCD275DF21800F5AA00 /* SceneDelegate.swift in Sources */,
+				0B01FBE9275E08FF00F5AA00 /* ChemModel.swift in Sources */,
+				0B01FBEB275E0A0B00F5AA00 /* K.swift in Sources */,
+				0B01FBE5275E080300F5AA00 /* ChemicalManager.swift in Sources */,
+				0B01FBE7275E086000F5AA00 /* ChemPropData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

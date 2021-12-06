@@ -41,7 +41,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="ChemCopilot" id="c6J-x0-cYk"/>
                     <connections>
-                        <outlet property="SearchTextField" destination="scG-cs-QCt" id="qH8-eb-shd"/>
+                        <outlet property="searchTextField" destination="scG-cs-QCt" id="qH8-eb-shd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

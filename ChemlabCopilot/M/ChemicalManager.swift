@@ -20,6 +20,7 @@ struct ChemicalManager {
     
     func fetchCompoundForData(name compound:String) {
         let urlString = "\(pubChemUrl)\(compound)\(toSearchForData)"
+        print(urlString)
         performRequest(with: urlString)
     }
     func fetchCompoundForPNG(name compound:String) {
@@ -32,12 +33,12 @@ struct ChemicalManager {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-//                    self.delegate?.didFailWithError(error: error!)
+                    self.delegate?.didFailWithError(error: error!)
                     return
                 }
                 if let safeData = data {
-                    if let weather = self.parseJSON(safeData) {
-//                        self.delegate?.didUpdateWeather(self, weather: weather)
+                    if let chemicalProp = self.parseJSON(safeData) {
+                        self.delegate?.didLoadChemical(self, chemModel: chemicalProp)
                     }
                 }
             }
@@ -50,11 +51,13 @@ struct ChemicalManager {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(ChemPropData.self, from: chemData)
-//            let id = decodedData.weather[0].id
-//            let temp = decodedData.main.temp
-//            let name = decodedData.name
-//            
-            let weather = ChemModel()//Todo
+            let pathWay = decodedData.PropertyTable.Properties[0]
+            let title = pathWay.Title
+            let moleW = pathWay.MolecularWeight
+            let canonical = pathWay.CanonicalSMILES
+            let inc = pathWay.InChI
+            let iup = pathWay.IUPACName
+            let weather = ChemModel(title, mw: moleW, smile: canonical, inchi: inc, iupac: iup)
             return weather
             
         } catch {
@@ -66,3 +69,7 @@ struct ChemicalManager {
 }
 
 
+//let molecularWeight:Double
+//let canonicalSMILES:String
+//let inChI:String
+//let iUPACName:String

@@ -8,6 +8,18 @@
 import Foundation
 
 struct ChemModel {
-    
+    let titleCompound:String
+    let molecularWeight:String
+    let canonicalSMILES:String
+    let inChI:String
+    let iUPACName:String
+
+    init(_ title:String,mw:String,smile:String,inchi:String,iupac:String){
+        titleCompound = title
+        molecularWeight = mw
+        canonicalSMILES = smile
+        inChI = inchi
+        iUPACName = iupac
+    }
 }
 

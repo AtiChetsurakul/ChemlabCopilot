@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B01FBCB275DF21800F5AA00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBCA275DF21800F5AA00 /* AppDelegate.swift */; };
 		0B01FBCD275DF21800F5AA00 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBCC275DF21800F5AA00 /* SceneDelegate.swift */; };
-		0B01FBCF275DF21800F5AA00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBCE275DF21800F5AA00 /* ViewController.swift */; };
+		0B01FBCF275DF21800F5AA00 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBCE275DF21800F5AA00 /* SearchViewController.swift */; };
 		0B01FBD2275DF21800F5AA00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B01FBD0275DF21800F5AA00 /* Main.storyboard */; };
 		0B01FBD5275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBD3275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld */; };
 		0B01FBD7275DF21900F5AA00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B01FBD6275DF21900F5AA00 /* Assets.xcassets */; };
@@ -18,13 +18,14 @@
 		0B01FBE7275E086000F5AA00 /* ChemPropData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBE6275E086000F5AA00 /* ChemPropData.swift */; };
 		0B01FBE9275E08FF00F5AA00 /* ChemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBE8275E08FF00F5AA00 /* ChemModel.swift */; };
 		0B01FBEB275E0A0B00F5AA00 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBEA275E0A0B00F5AA00 /* K.swift */; };
+		0B01FBED275E472500F5AA00 /* PresentDataFFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBEC275E472500F5AA00 /* PresentDataFFViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B01FBC7275DF21800F5AA00 /* ChemlabCopilot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChemlabCopilot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B01FBCA275DF21800F5AA00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B01FBCC275DF21800F5AA00 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0B01FBCE275DF21800F5AA00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B01FBCE275DF21800F5AA00 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0B01FBD1275DF21800F5AA00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B01FBD4275DF21800F5AA00 /* ChemlabCopilot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ChemlabCopilot.xcdatamodel; sourceTree = "<group>"; };
 		0B01FBD6275DF21900F5AA00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -34,6 +35,7 @@
 		0B01FBE6275E086000F5AA00 /* ChemPropData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemPropData.swift; sourceTree = "<group>"; };
 		0B01FBE8275E08FF00F5AA00 /* ChemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemModel.swift; sourceTree = "<group>"; };
 		0B01FBEA275E0A0B00F5AA00 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
+		0B01FBEC275E472500F5AA00 /* PresentDataFFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDataFFViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,8 @@
 		0B01FBE1275DF2A800F5AA00 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				0B01FBCE275DF21800F5AA00 /* ViewController.swift */,
+				0B01FBCE275DF21800F5AA00 /* SearchViewController.swift */,
+				0B01FBEC275E472500F5AA00 /* PresentDataFFViewController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -177,8 +180,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B01FBCF275DF21800F5AA00 /* ViewController.swift in Sources */,
+				0B01FBCF275DF21800F5AA00 /* SearchViewController.swift in Sources */,
 				0B01FBD5275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld in Sources */,
+				0B01FBED275E472500F5AA00 /* PresentDataFFViewController.swift in Sources */,
 				0B01FBCB275DF21800F5AA00 /* AppDelegate.swift in Sources */,
 				0B01FBCD275DF21800F5AA00 /* SceneDelegate.swift in Sources */,
 				0B01FBE9275E08FF00F5AA00 /* ChemModel.swift in Sources */,

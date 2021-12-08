@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,6 +12,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dCf-9Y-oi3">
+            <objects>
+                <navigationController id="YU3-CP-zjK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qUQ-6g-1Kc">
+                        <rect key="frame" x="0.0" y="24" width="834" height="50"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w6E-a8-BXV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INB-rk-4nT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-444" y="-611"/>
+        </scene>
         <!--ChemCopilot-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,6 +38,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChemBG" translatesAutoresizingMaskIntoConstraints="NO" id="2fq-te-lSq" userLabel="background">
                                 <rect key="frame" x="-87" y="-62" width="1009" height="1319"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="q8E-Oy-2vU">
                                 <rect key="frame" x="100" y="74" width="634" height="150"/>
@@ -55,6 +71,9 @@
                                             </imageReference>
                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="40" scale="large" weight="bold"/>
                                         </state>
+                                        <connections>
+                                            <action selector="projectLibPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pjY-Sp-31W"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -62,11 +81,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="lF2-8p-vQL">
-                                <rect key="frame" x="100" y="374" width="634" height="146"/>
+                                <rect key="frame" x="100" y="274" width="634" height="146"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SearchHere!" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="scG-cs-QCt">
                                         <rect key="frame" x="0.0" y="0.0" width="634" height="34"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                     </textField>
@@ -103,24 +121,25 @@
                             <constraint firstItem="q8E-Oy-2vU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="8qF-Sg-FVf"/>
                             <constraint firstItem="lF2-8p-vQL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="JBE-C8-VCc"/>
                             <constraint firstItem="2fq-te-lSq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-87" id="NIm-pk-oHi"/>
-                            <constraint firstItem="lF2-8p-vQL" firstAttribute="top" secondItem="q8E-Oy-2vU" secondAttribute="bottom" constant="150" id="OCa-RS-waR"/>
+                            <constraint firstItem="lF2-8p-vQL" firstAttribute="top" secondItem="q8E-Oy-2vU" secondAttribute="bottom" constant="50" id="OCa-RS-waR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q8E-Oy-2vU" secondAttribute="trailing" constant="100" id="OMT-lN-RwE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lF2-8p-vQL" secondAttribute="trailing" constant="100" id="XfQ-T9-SuM"/>
                             <constraint firstAttribute="trailing" secondItem="2fq-te-lSq" secondAttribute="trailing" constant="-88" id="vwI-gQ-f0A"/>
-                            <constraint firstItem="lF2-8p-vQL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="wPP-43-fru"/>
+                            <constraint firstItem="lF2-8p-vQL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="wPP-43-fru"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ChemCopilot" id="c6J-x0-cYk"/>
                     <connections>
                         <outlet property="searchTextField" destination="scG-cs-QCt" id="qH8-eb-shd"/>
-                        <segue destination="HfP-xc-NtM" kind="popoverPresentation" identifier="GoToPresentFetched" popoverAnchorView="lF2-8p-vQL" id="6Qm-Ab-UPA">
+                        <segue destination="HfP-xc-NtM" kind="popoverPresentation" identifier="GoToPresentFetched" popoverAnchorView="scG-cs-QCt" id="6Qm-Ab-UPA">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                         </segue>
+                        <segue destination="VXO-bC-Qz0" kind="show" identifier="testSegueToCollectionView" id="gfv-AD-TDL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244.72361809045225" y="-188.48920863309354"/>
+            <point key="canvasLocation" x="350" y="-592"/>
         </scene>
         <!--Present DataFF View Controller-->
         <scene sceneID="R9P-xN-FHY">
@@ -180,7 +199,7 @@
                                         <state key="normal" title=" To New Lab">
                                             <color key="titleColor" systemColor="systemIndigoColor"/>
                                             <color key="titleShadowColor" systemColor="systemGreenColor"/>
-                                            <imageReference key="image" image="plus.square.dashed" catalog="system" symbolScale="large" renderingMode="hierarchical">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large" renderingMode="hierarchical">
                                                 <hierarchicalColors>
                                                     <color systemColor="systemIndigoColor"/>
                                                     <color systemColor="secondaryLabelColor"/>
@@ -194,7 +213,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=" To created lab">
                                             <color key="titleColor" systemColor="systemTealColor"/>
-                                            <imageReference key="image" image="rectangle.portrait.and.arrow.right" catalog="system" renderingMode="hierarchical">
+                                            <imageReference key="image" image="leaf" catalog="system" renderingMode="hierarchical">
                                                 <hierarchicalColors>
                                                     <color systemColor="systemTealColor"/>
                                                     <color systemColor="secondaryLabelColor"/>
@@ -265,68 +284,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ua9-1f-8uO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244.60431654676262" y="644.2211055276382"/>
+            <point key="canvasLocation" x="350" y="138"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="qhA-Cg-dYX">
-            <objects>
-                <tableViewController id="bbR-9u-7Ir" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uPY-3m-ecz">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FMz-Tt-lfY">
-                                <rect key="frame" x="0.0" y="44.5" width="834" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FMz-Tt-lfY" id="0GS-5b-Irj">
-                                    <rect key="frame" x="0.0" y="0.0" width="834" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bbR-9u-7Ir" id="gDg-Tv-8ra"/>
-                            <outlet property="delegate" destination="bbR-9u-7Ir" id="1qe-Mh-yu0"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xic-us-e1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1123" y="78"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dCf-9Y-oi3">
-            <objects>
-                <navigationController id="YU3-CP-zjK" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qUQ-6g-1Kc">
-                        <rect key="frame" x="0.0" y="24" width="834" height="50"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="w6E-a8-BXV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="INB-rk-4nT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-583" y="78"/>
-        </scene>
-        <!--Collection View Controller-->
+        <!--Lab Gallery-->
         <scene sceneID="lhQ-qj-2tc">
             <objects>
-                <collectionViewController id="VXO-bC-Qz0" sceneMemberID="viewController">
+                <collectionViewController id="VXO-bC-Qz0" customClass="ProjectManagerCollectController" customModule="ChemlabCopilot" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ueB-rS-d6t">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fmJ-0W-V51">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fmJ-0W-V51">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Rum-gj-bQA">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LabToDoCellIden" id="Rum-gj-bQA">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pOC-IK-aCs">
@@ -340,18 +315,44 @@
                             <outlet property="delegate" destination="VXO-bC-Qz0" id="WX6-Ha-u2s"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Lab Gallery" id="02O-L1-u2m">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5Go-Rg-PcQ">
+                            <connections>
+                                <action selector="addProjectPressed:" destination="VXO-bC-Qz0" id="rMC-ZV-Ifr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="MBV-51-3D1" kind="show" identifier="GoToInsideProject" id="cVB-na-SOM"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xwp-DG-uUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2010" y="78"/>
+            <point key="canvasLocation" x="1176" y="-592"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bkp-Nq-H7W">
+            <objects>
+                <viewController id="MBV-51-3D1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yre-ZF-CMV">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="36B-Nz-Esb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DpS-aD-Edg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qog-YP-wwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912" y="-592"/>
         </scene>
     </scenes>
     <resources>
         <image name="ChemBG" width="8000" height="4663"/>
         <image name="externaldrive.badge.plus" catalog="system" width="128" height="92"/>
+        <image name="leaf" catalog="system" width="128" height="109"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="plus.square.dashed" catalog="system" width="128" height="114"/>
-        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="tray.2" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -19,6 +19,9 @@
 		0B01FBE9275E08FF00F5AA00 /* ChemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBE8275E08FF00F5AA00 /* ChemModel.swift */; };
 		0B01FBEB275E0A0B00F5AA00 /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBEA275E0A0B00F5AA00 /* K.swift */; };
 		0B01FBED275E472500F5AA00 /* PresentDataFFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B01FBEC275E472500F5AA00 /* PresentDataFFViewController.swift */; };
+		0B8BA45D275FEA3D0053AC72 /* LabToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA45B275FEA3D0053AC72 /* LabToDoCell.swift */; };
+		0B8BA45E275FEA3D0053AC72 /* LabToDoCellX.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B8BA45C275FEA3D0053AC72 /* LabToDoCellX.xib */; };
+		0B8BA461275FEAF20053AC72 /* ProjectManagerCollectController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B8BA460275FEAF20053AC72 /* ProjectManagerCollectController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		0B01FBE8275E08FF00F5AA00 /* ChemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChemModel.swift; sourceTree = "<group>"; };
 		0B01FBEA275E0A0B00F5AA00 /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		0B01FBEC275E472500F5AA00 /* PresentDataFFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentDataFFViewController.swift; sourceTree = "<group>"; };
+		0B8BA45B275FEA3D0053AC72 /* LabToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabToDoCell.swift; sourceTree = "<group>"; };
+		0B8BA45C275FEA3D0053AC72 /* LabToDoCellX.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabToDoCellX.xib; sourceTree = "<group>"; };
+		0B8BA460275FEAF20053AC72 /* ProjectManagerCollectController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectManagerCollectController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +76,13 @@
 			children = (
 				0B01FBCA275DF21800F5AA00 /* AppDelegate.swift */,
 				0B01FBCC275DF21800F5AA00 /* SceneDelegate.swift */,
+				0B8BA458275FBAB10053AC72 /* DataM */,
 				0B01FBE3275DF2BC00F5AA00 /* M */,
 				0B01FBE1275DF2A800F5AA00 /* C */,
 				0B01FBE2275DF2B400F5AA00 /* V */,
 				0B01FBD6275DF21900F5AA00 /* Assets.xcassets */,
 				0B01FBD8275DF21900F5AA00 /* LaunchScreen.storyboard */,
 				0B01FBDB275DF21900F5AA00 /* Info.plist */,
-				0B01FBD3275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld */,
 			);
 			path = ChemlabCopilot;
 			sourceTree = "<group>";
@@ -86,6 +92,8 @@
 			children = (
 				0B01FBCE275DF21800F5AA00 /* SearchViewController.swift */,
 				0B01FBEC275E472500F5AA00 /* PresentDataFFViewController.swift */,
+				0B8BA45B275FEA3D0053AC72 /* LabToDoCell.swift */,
+				0B8BA460275FEAF20053AC72 /* ProjectManagerCollectController.swift */,
 			);
 			path = C;
 			sourceTree = "<group>";
@@ -93,6 +101,7 @@
 		0B01FBE2275DF2B400F5AA00 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				0B8BA45C275FEA3D0053AC72 /* LabToDoCellX.xib */,
 				0B01FBD0275DF21800F5AA00 /* Main.storyboard */,
 			);
 			path = V;
@@ -107,6 +116,14 @@
 				0B01FBEA275E0A0B00F5AA00 /* K.swift */,
 			);
 			path = M;
+			sourceTree = "<group>";
+		};
+		0B8BA458275FBAB10053AC72 /* DataM */ = {
+			isa = PBXGroup;
+			children = (
+				0B01FBD3275DF21800F5AA00 /* ChemlabCopilot.xcdatamodeld */,
+			);
+			path = DataM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B01FBDA275DF21900F5AA00 /* LaunchScreen.storyboard in Resources */,
+				0B8BA45E275FEA3D0053AC72 /* LabToDoCellX.xib in Resources */,
 				0B01FBD7275DF21900F5AA00 /* Assets.xcassets in Resources */,
 				0B01FBD2275DF21800F5AA00 /* Main.storyboard in Resources */,
 			);
@@ -185,10 +203,12 @@
 				0B01FBED275E472500F5AA00 /* PresentDataFFViewController.swift in Sources */,
 				0B01FBCB275DF21800F5AA00 /* AppDelegate.swift in Sources */,
 				0B01FBCD275DF21800F5AA00 /* SceneDelegate.swift in Sources */,
+				0B8BA45D275FEA3D0053AC72 /* LabToDoCell.swift in Sources */,
 				0B01FBE9275E08FF00F5AA00 /* ChemModel.swift in Sources */,
 				0B01FBEB275E0A0B00F5AA00 /* K.swift in Sources */,
 				0B01FBE5275E080300F5AA00 /* ChemicalManager.swift in Sources */,
 				0B01FBE7275E086000F5AA00 /* ChemPropData.swift in Sources */,
+				0B8BA461275FEAF20053AC72 /* ProjectManagerCollectController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +365,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -374,7 +394,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

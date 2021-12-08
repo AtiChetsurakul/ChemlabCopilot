@@ -8,7 +8,7 @@
 import UIKit
 
 class PresentDataFFViewController: UIViewController {
-
+    static let segueIdentifier = "GoToPresentFetched"
     @IBOutlet weak var titleName: UILabel!
     @IBOutlet weak var canonicalSMILES: UILabel!
     @IBOutlet weak var iUPACName: UILabel!

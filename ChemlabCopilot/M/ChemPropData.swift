@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 struct ChemPropData:Codable {
     let PropertyTable: PropertyTableS
 }
@@ -22,7 +23,8 @@ struct Property: Codable {
     let Title:String
 }
     
-
+    
 //PropertyTable.Properties[0].MolecularWeight
 //PropertyTable
 //PropertyTable.Properties
+

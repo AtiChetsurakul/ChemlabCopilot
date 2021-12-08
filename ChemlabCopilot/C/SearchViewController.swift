@@ -8,7 +8,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-
+    
     var fetchedModel:ChemModel?
     var chemicalMan = ChemicalManager()
     @IBOutlet weak var searchTextField: UITextField!
@@ -18,13 +18,16 @@ class SearchViewController: UIViewController {
         chemicalMan.delegate = self
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func searchPressed(_ sender: UIButton) {
         searchTextField.endEditing(true)
     }
+    
+    @IBAction func projectLibPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "testSegueToCollectionView", sender: self)
+    }
 }
 //MARK: ChemicalManager Method
-    
 extension SearchViewController: ChemicalManagerDelegate {
     func didLoadChemical(_ chemManager: ChemicalManager, chemModel: ChemModel) {
         DispatchQueue.main.async {
@@ -36,19 +39,20 @@ extension SearchViewController: ChemicalManagerDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationVC =  segue.destination as! PresentDataFFViewController
-        if let modelToPassed = fetchedModel {
-        destinationVC.modelToPresent = modelToPassed
+        if segue.identifier == PresentDataFFViewController.segueIdentifier {
+            let destinationVC =  segue.destination as! PresentDataFFViewController
+            if let modelToPassed = fetchedModel {
+                destinationVC.modelToPresent = modelToPassed
+            }
         }
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+
     }
     
     func didFailWithError(error: Error) {
         print(error)
     }
 }
-    
+
 extension SearchViewController:UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchTextField.endEditing(true)
